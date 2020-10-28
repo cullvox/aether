@@ -1,4 +1,4 @@
-#include "aether.h"
+#include "aether/aether.h"
 
 #include "stdlib.h"
 #include "stdio.h"

@@ -1,4 +1,4 @@
-#include "aether.h"
+#include "aether/aether.h"
 
 void vec2i_add(int* left, int* right, int* res)
 {

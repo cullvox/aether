@@ -9,4 +9,24 @@ set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 # Setup aether options
 # TODO : Create options
 
-add_subdirectory(source)
+
+# Add sources array
+set(aether_sources "")
+
+# Add the proper source files to the array
+list(APPEND aether_sources
+    "source/a_matrix.c"
+    "source/a_vector.c"
+    "source/a_mathematical.c"
+)
+
+# Add the includes
+list(APPEND aether_sources
+    "include/aether/aether.h"
+)
+
+
+# Create the library
+add_library(aether STATIC ${aether_sources})
+
+target_include_directories(aether PUBLIC include)
